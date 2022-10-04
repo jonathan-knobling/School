@@ -4,6 +4,32 @@ public static class Program
 {
     public static void Main()
     {
+        //ArrayQueue();
+        Queue();
+    }
+
+    private static void Queue()
+    {
+        IQueue<Dog> dogQueue = new Queue<Dog>();
+
+        dogQueue.Add(new Dog());
+        dogQueue.Add(new Dog());
+        dogQueue.Add(new Dog());
+        dogQueue.Add(new Dog());
+        dogQueue.Add(new Dog());
+        dogQueue.Add(new Dog());
+        dogQueue.Add(new Dog());
+        
+        Console.WriteLine(dogQueue.Get());
+        Console.WriteLine(dogQueue.Get());
+        Console.WriteLine(dogQueue.Get());
+        Console.WriteLine(dogQueue.Get());
+        Console.WriteLine(dogQueue.Get());
+        Console.WriteLine(dogQueue.Get());
+    }
+
+    private static void ArrayQueue()
+    {
         IQueue<Dog> dogQueue = new ArrayQueue<Dog>();
         
         dogQueue.Add(new Dog());
@@ -42,7 +68,6 @@ public static class Program
         Console.WriteLine(dogQueue.Get());
         Console.WriteLine(dogQueue.Get());
         Console.WriteLine(dogQueue.Get());
-
     }
 }
 

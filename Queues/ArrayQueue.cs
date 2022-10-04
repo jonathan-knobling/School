@@ -14,11 +14,7 @@ public class ArrayQueue<T> : IQueue<T>
     {
         _items = new T[8];
     }
-
-    /// <summary>
-    /// Enqueues an item to the Queue
-    /// </summary>
-    /// <param name="item">The item to Enqueue</param>
+    
     public void Add(T item)
     {
         CheckIsFull();
@@ -33,11 +29,7 @@ public class ArrayQueue<T> : IQueue<T>
             _head = 0;
         }
     }
-
-    /// <summary>
-    /// Gets the first item in the Queue and dequeues it
-    /// </summary>
-    /// <returns>The first item in the Queue</returns>
+    
     public T Get()
     {
         var item = _items[_tail];
@@ -54,11 +46,7 @@ public class ArrayQueue<T> : IQueue<T>
         
         return item ?? default!;
     }
-
-    /// <summary>
-    /// Returns the First item in Queue without Dequeueing it
-    /// </summary>
-    /// <returns>The first Item in the Queue</returns>
+    
     public T Peek()
     {
         return _items[_tail] ?? default!;
@@ -67,7 +55,7 @@ public class ArrayQueue<T> : IQueue<T>
     /// <summary>
     /// Checks if the Queue is Full and Calls the DoubleSize Method if it is
     /// </summary>
-    private void CheckIsFull()
+    internal void CheckIsFull()
     {
         if (_head < _tail && _tail - _head > 1) return;
         if (_tail - _head == 1) DoubleSize();
@@ -79,7 +67,7 @@ public class ArrayQueue<T> : IQueue<T>
     /// <summary>
     /// Doubles the Size of the array which the Queue is implemented with
     /// </summary>
-    private void DoubleSize()
+    internal void DoubleSize()
     {
         var newItems = new T[_items.Length * 2];
         _items.CopyTo(newItems.AsSpan());
