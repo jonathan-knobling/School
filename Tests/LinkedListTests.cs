@@ -13,7 +13,7 @@ public class LinkedListTests
     public void ArrayAccess_ShouldGetTheItemAtSpecifiedIndex(int listSize, int checks, int seed)
     {
         // Arrange
-        IList<int> list = new School.LinkedLists.LinkedList<int>();
+        IList<int> list = new RandomShit.DataStructures.LinkedList<int>();
         var reference = new int[listSize];
         
         var rnd = new Random(seed);
@@ -43,7 +43,7 @@ public class LinkedListTests
     public void ArrayAccesSet_ShouldReplaceItemAtSpecifiedIndex(int listSize, int seed)
     {
         // Arrange
-        IList<int> list = new School.LinkedLists.LinkedList<int>();
+        IList<int> list = new RandomShit.DataStructures.LinkedList<int>();
         int[] reference = new int[listSize];
         
         for (int i = 0; i < listSize; i++)
@@ -76,7 +76,7 @@ public class LinkedListTests
     public void ArrayAccessGet_ShouldThrow_WhenIndexTooBig(int listSize, int index)
     {
         // Arrange
-        IList<int> list = new School.LinkedLists.LinkedList<int>();
+        IList<int> list = new RandomShit.DataStructures.LinkedList<int>();
         for (int i = 0; i < listSize; i++)
         {
             list.Add(i);
@@ -96,7 +96,7 @@ public class LinkedListTests
     public void ArrayAccessSet_ShouldThrow_WhenIndexTooBig(int listSize, int index)
     {
         // Arrange
-        IList<int> list = new School.LinkedLists.LinkedList<int>();
+        IList<int> list = new RandomShit.DataStructures.LinkedList<int>();
         for (int i = 0; i < listSize; i++)
         {
             list.Add(i);
@@ -116,7 +116,7 @@ public class LinkedListTests
     public void ArrayAccessGet_ShouldThrow_WhenIndexLessThanZero(int listSize, int index)
     {
         // Arrange
-        IList<int> list = new School.LinkedLists.LinkedList<int>();
+        IList<int> list = new RandomShit.DataStructures.LinkedList<int>();
         for (int i = 0; i < listSize; i++)
         {
             list.Add(i);
@@ -136,7 +136,7 @@ public class LinkedListTests
     public void ArrayAccessSet_ShouldThrow_WhenIndexLessThanZero(int listSize, int index)
     {
         // Arrange
-        IList<int> list = new School.LinkedLists.LinkedList<int>();
+        IList<int> list = new RandomShit.DataStructures.LinkedList<int>();
         for (int i = 0; i < listSize; i++)
         {
             list.Add(i);
@@ -160,7 +160,7 @@ public class LinkedListTests
     public void Item_ShouldBeAddedToEndOfList_WhenAddIsCalled(params int[] items)
     {
         // Arrange
-        IList<int> list = new School.LinkedLists.LinkedList<int>();
+        IList<int> list = new RandomShit.DataStructures.LinkedList<int>();
 
         // Act
         foreach (int item in items)
@@ -179,7 +179,7 @@ public class LinkedListTests
     public void AddingNull_ShouldNotThrow()
     {
         // Arrange
-        IList<object> list = new School.LinkedLists.LinkedList<object>();
+        IList<object> list = new RandomShit.DataStructures.LinkedList<object>();
         list.Add(-1);
         list.Add(-1);
         
@@ -201,7 +201,7 @@ public class LinkedListTests
     public void Count_ShouldBeUpdated_WhenItemIsAdded(params int[] items)
     {
         // Arrange
-        IList<int> list = new School.LinkedLists.LinkedList<int>();
+        IList<int> list = new RandomShit.DataStructures.LinkedList<int>();
         
         // Act
         foreach (int item in items)
@@ -224,7 +224,7 @@ public class LinkedListTests
     public void Count_ShouldBeUpdated_WhenItemIsInserted(params int[] items)
     {
         // Arrange
-        IList<int> list = new School.LinkedLists.LinkedList<int>();
+        IList<int> list = new RandomShit.DataStructures.LinkedList<int>();
         list.Add(1);
         list.Add(2);
 
@@ -249,7 +249,7 @@ public class LinkedListTests
     public void Insert_InsertsElementAtSpecifiedIndex(int seed)
     {
         // Arrange
-        IList<int> list = new School.LinkedLists.LinkedList<int>();
+        IList<int> list = new RandomShit.DataStructures.LinkedList<int>();
 
         var rnd = new Random(seed);
         int numberOfInsertions = rnd.Next(128);
@@ -279,7 +279,7 @@ public class LinkedListTests
     public void Insert_ThrowsExceptionWhenIndexIsOutOfRange()
     {
         // Arrange
-        IList<int> list = new School.LinkedLists.LinkedList<int>();
+        IList<int> list = new RandomShit.DataStructures.LinkedList<int>();
 
         // Act & Assert
         list.Invoking(l => l.Insert(-1, 1)).Should().Throw<ArgumentOutOfRangeException>();
@@ -290,7 +290,7 @@ public class LinkedListTests
     public void InsertingNull_ShouldNotThrow()
     {
         // Arrange
-        IList<object> list = new School.LinkedLists.LinkedList<object>();
+        IList<object> list = new RandomShit.DataStructures.LinkedList<object>();
         list.Add(-1);
         list.Add(-1);
         
@@ -306,7 +306,7 @@ public class LinkedListTests
     public void RemoveAt_RemovesElementAtSpecifiedIndex()
     {
         // Arrange
-        IList<int> list = new School.LinkedLists.LinkedList<int>();
+        IList<int> list = new RandomShit.DataStructures.LinkedList<int>();
 
         // Act
         list.Add(1);
@@ -325,7 +325,7 @@ public class LinkedListTests
     public void RemoveAt_ThrowsExceptionWhenIndexIsOutOfRange()
     {
         // Arrange
-        IList<int> list = new School.LinkedLists.LinkedList<int>();
+        IList<int> list = new RandomShit.DataStructures.LinkedList<int>();
 
         // Act & Assert
         list.Invoking(l => l.RemoveAt(-1)).Should().Throw<ArgumentOutOfRangeException>();
@@ -339,7 +339,7 @@ public class LinkedListTests
     public void IndexOf_ReturnsIndexOfElement()
     {
         // Arrange
-        IList<int> list = new School.LinkedLists.LinkedList<int>();
+        IList<int> list = new RandomShit.DataStructures.LinkedList<int>();
 
         // Act
         list.Add(1);
@@ -356,7 +356,7 @@ public class LinkedListTests
     public void IndexOf_ReturnsMinusOneWhenElementNotFound()
     {
         // Arrange
-        IList<int> list = new School.LinkedLists.LinkedList<int>();
+        IList<int> list = new RandomShit.DataStructures.LinkedList<int>();
 
         // Act
         list.Add(1);
@@ -374,7 +374,7 @@ public class LinkedListTests
     public void GetEnumerator_EnumeratesListCorrectly()
     {
         // Arrange
-        IList<int> list = new School.LinkedLists.LinkedList<int>();
+        IList<int> list = new RandomShit.DataStructures.LinkedList<int>();
 
         list.Add(1);
         list.Add(2);
@@ -399,7 +399,7 @@ public class LinkedListTests
     public void Clear_ClearsList()
     {
         // Arrange
-        IList<int> list = new School.LinkedLists.LinkedList<int>();
+        IList<int> list = new RandomShit.DataStructures.LinkedList<int>();
 
         list.Add(1);
         list.Add(2);

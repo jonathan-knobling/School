@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace School.LinkedLists;
+namespace RandomShit.DataStructures;
 
 public class LinkedList<T> : IList<T>
 {

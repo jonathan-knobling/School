@@ -1,13 +1,7 @@
-﻿namespace School.Queues;
+﻿namespace RandomShit.Queues;
 
-public static class Program
+public static class QueueTest
 {
-    public static void Main()
-    {
-        //ArrayQueue();
-        Queue();
-    }
-
     private static void Queue()
     {
         IQueue<Dog> dogQueue = new Queue<Dog>();

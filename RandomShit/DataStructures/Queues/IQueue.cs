@@ -1,4 +1,4 @@
-﻿namespace School.Queues;
+﻿namespace RandomShit.Queues;
 
 public interface IQueue<T>
 {

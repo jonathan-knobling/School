@@ -1,4 +1,4 @@
-﻿namespace School.Queues;
+﻿namespace RandomShit.Queues;
 
 /// <summary>
 /// Queue implemented using an array

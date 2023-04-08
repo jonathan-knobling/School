@@ -1,4 +1,4 @@
-﻿namespace School.Queues;
+﻿namespace RandomShit.Queues;
 
 /// <summary>
 /// A queue implemented using an Linked List Approach
