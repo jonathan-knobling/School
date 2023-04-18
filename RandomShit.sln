@@ -4,8 +4,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomShit", "RandomShit\Ra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{CED2BBE3-E7A5-4405-A271-A524BA9B86D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SudokuSolver", "SudokuSolver\SudokuSolver.csproj", "{6B23985E-649A-4146-8BFA-3F33E446C784}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,9 +18,5 @@ Global
 		{CED2BBE3-E7A5-4405-A271-A524BA9B86D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CED2BBE3-E7A5-4405-A271-A524BA9B86D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CED2BBE3-E7A5-4405-A271-A524BA9B86D0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6B23985E-649A-4146-8BFA-3F33E446C784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6B23985E-649A-4146-8BFA-3F33E446C784}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6B23985E-649A-4146-8BFA-3F33E446C784}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6B23985E-649A-4146-8BFA-3F33E446C784}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
